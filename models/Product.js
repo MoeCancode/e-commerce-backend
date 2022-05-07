@@ -20,7 +20,7 @@ Product.init(
       allowNull: false
     },
    price: {
-    type: DataTypes.DECIMAL,
+    type: DataTypes.DECIMAL(10,2),
     allowNull: false,
     validate: {
       isDecimal: true,
@@ -37,7 +37,7 @@ Product.init(
    category_id: {
     type: DataTypes.INTEGER,
     references: {
-      model: "Category",
+      model: "category",
       key: "id"
     }
    }
